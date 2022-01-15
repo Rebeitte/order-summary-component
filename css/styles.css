@@ -1,0 +1,188 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+*::first-letter {
+    text-transform: uppercase;
+  }
+  
+:root {
+
+    /**Primary**/
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+
+    /**Secondary**/
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Paleblue);
+    background-image: url("/images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: .5rem;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--Desaturatedblue);
+    line-height: 1.8;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.container {
+    max-width: 100%;
+    margin: 3rem 1rem 0.5rem 1rem;
+    background-color: var(--Verypaleblue);
+    border-radius: 0.8rem;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.11);
+}
+
+
+.info {
+    text-align: center; 
+    margin-top: 2rem;
+    padding: 0rem 1.2rem;
+}
+
+.plans {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.plans__info {
+    margin: 0 2.5rem 0 .5rem;
+}
+
+
+.plans a {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--Brightblue);
+    text-decoration: underline;
+}
+
+.plans a:hover {
+    color: hsla(245, 75%, 52%, 0.555);
+    text-decoration: none;
+}
+
+.plans a:focus-visible {
+    color: hsla(245, 75%, 52%, 0.555);
+    text-decoration: none;
+}
+
+.plans__info p {
+    font-size: .9rem;
+    font-weight: 500;
+    margin-top: -0.7rem;
+}
+
+.order { 
+    display: block;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: var(--Desaturatedblue);
+    font-weight: 700;
+    font-size: 0.8;
+}
+
+.btn {
+    background-color: var(--Brightblue);
+    color: var(--Paleblue);
+    padding: .9rem 2rem;
+    border-radius: 0.8rem;
+}
+
+.btn:focus-visible { 
+    background-color: hsla(245, 75%, 52%, 0.555);
+}
+
+.cursor:focus-visible { 
+    color: var(--Brightblue);
+}
+
+.btn:hover {
+    background-color: hsla(245, 75%, 52%, 0.555);
+}
+
+footer a { 
+    color: var(--Brightblue);
+}
+
+footer a:hover { 
+    color: hsla(245, 75%, 52%, 0.555);
+}
+
+footer a:focus-visible { 
+    color: hsla(245, 75%, 52%, 0.555);
+}
+
+@media (min-width: 400px) {
+    body {
+        background-image: url("/images/pattern-background-desktop.svg");
+        background-size: contain;
+    }
+    .container {
+        max-width: 23rem;
+        margin: 3rem 1rem 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .plans__info {
+        margin: 0 3rem 0 0rem ;
+    }
+
+    
+    .info {
+        text-align: center; 
+        margin-top: 2rem;
+        padding: 0rem 3rem;
+    }
+
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
